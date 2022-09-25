@@ -14,6 +14,11 @@
 		91FFC8B128DB631E0013F026 /* oneSwimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFC8B028DB631E0013F026 /* oneSwimTests.swift */; };
 		91FFC8BB28DB631E0013F026 /* oneSwimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFC8BA28DB631E0013F026 /* oneSwimUITests.swift */; };
 		91FFC8BD28DB631E0013F026 /* oneSwimUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFC8BC28DB631E0013F026 /* oneSwimUITestsLaunchTests.swift */; };
+		91FFC8CA28DC92EF0013F026 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFC8C928DC92EF0013F026 /* CircleImage.swift */; };
+		91FFC8CC28DC955C0013F026 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFC8CB28DC955C0013F026 /* MapView.swift */; };
+		91FFC8CE28DCB2120013F026 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFC8CD28DCB2120013F026 /* HealthView.swift */; };
+		91FFC8D228DCB2CA0013F026 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91FFC8D128DCB2CA0013F026 /* HealthKit.framework */; };
+		91FFC8D428DCB7D70013F026 /* HealthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFC8D328DCB7D70013F026 /* HealthModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,12 @@
 		91FFC8B628DB631E0013F026 /* oneSwimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oneSwimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FFC8BA28DB631E0013F026 /* oneSwimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneSwimUITests.swift; sourceTree = "<group>"; };
 		91FFC8BC28DB631E0013F026 /* oneSwimUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oneSwimUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		91FFC8C928DC92EF0013F026 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		91FFC8CB28DC955C0013F026 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		91FFC8CD28DCB2120013F026 /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
+		91FFC8CF28DCB2CA0013F026 /* oneSwim.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = oneSwim.entitlements; sourceTree = "<group>"; };
+		91FFC8D128DCB2CA0013F026 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		91FFC8D328DCB7D70013F026 /* HealthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FFC8D228DCB2CA0013F026 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +90,7 @@
 				91FFC8AF28DB631E0013F026 /* oneSwimTests */,
 				91FFC8B928DB631E0013F026 /* oneSwimUITests */,
 				91FFC89D28DB631B0013F026 /* Products */,
+				91FFC8D028DCB2CA0013F026 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +107,13 @@
 		91FFC89E28DB631B0013F026 /* oneSwim */ = {
 			isa = PBXGroup;
 			children = (
+				91FFC8CF28DCB2CA0013F026 /* oneSwim.entitlements */,
 				91FFC89F28DB631B0013F026 /* oneSwimApp.swift */,
 				91FFC8A128DB631B0013F026 /* ContentView.swift */,
+				91FFC8D328DCB7D70013F026 /* HealthModel.swift */,
+				91FFC8CD28DCB2120013F026 /* HealthView.swift */,
+				91FFC8C928DC92EF0013F026 /* CircleImage.swift */,
+				91FFC8CB28DC955C0013F026 /* MapView.swift */,
 				91FFC8A328DB631E0013F026 /* Assets.xcassets */,
 				91FFC8A528DB631E0013F026 /* Preview Content */,
 			);
@@ -125,6 +143,14 @@
 				91FFC8BC28DB631E0013F026 /* oneSwimUITestsLaunchTests.swift */,
 			);
 			path = oneSwimUITests;
+			sourceTree = "<group>";
+		};
+		91FFC8D028DCB2CA0013F026 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91FFC8D128DCB2CA0013F026 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91FFC8A228DB631B0013F026 /* ContentView.swift in Sources */,
+				91FFC8D428DCB7D70013F026 /* HealthModel.swift in Sources */,
+				91FFC8CC28DC955C0013F026 /* MapView.swift in Sources */,
 				91FFC8A028DB631B0013F026 /* oneSwimApp.swift in Sources */,
+				91FFC8CE28DCB2120013F026 /* HealthView.swift in Sources */,
+				91FFC8CA28DC92EF0013F026 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = oneSwim/oneSwim.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"oneSwim/Preview Content\"";
@@ -444,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = oneSwim/oneSwim.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"oneSwim/Preview Content\"";

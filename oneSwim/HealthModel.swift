@@ -6,3 +6,9 @@
 //
 
 import Foundation
+struct HealthModel {
+    var title: String = "Test"
+    mutating func set(title:String){
+        self.title=title
+    }
+}

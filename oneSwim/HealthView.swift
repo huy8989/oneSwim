@@ -1,20 +1,28 @@
 //
-//  HealthView.swift
-//  oneSwim
+//  TemperatureTableViewController.swift
+//  BodyTemparature
 //
-//  Created by jianye.liu on 2022/9/22.
+//  Created by Kyle on 2020/2/10.
+//  Copyright © 2020 Cyan Maple. All rights reserved.
 //
 
+import UIKit
+import HealthKit
 import SwiftUI
 
-struct HealthView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct HealthView_Previews: PreviewProvider {
-    static var previews: some View {
-        HealthView()
-    }
+/// 获取 Health 中的体温数据
+class TemperatureTableViewController: ViewController<ContentView> {
+        private let model = HealthModel()
+    
+    override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            // 将数据设置到视图
+            container.set(title: model.title)
+        }
+        
+        static func instance() -> Self {
+            return StoryBoard.main.instance()
+        }
+    
 }

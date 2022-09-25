@@ -8,14 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var titleLabel=HealthModel()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            MapView().frame(height:300).edgesIgnoringSafeArea(.top)
+            CircleImage().padding(.bottom,-130).offset(y:-130)
+            VStack(){
+                Text(titleLabel.title)
+                HStack(){
+                    Text("Hebei")
+                    Spacer()
+                    Text("yuhua")
+                }.padding()
+                
+
+            }
+            Spacer()
+        }
+        .padding()
+    }
+    
+    func set(title:String){
+        titleLabel.title=title
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environment(\.sizeCategory, .small)
     }
 }
+
+

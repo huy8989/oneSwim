@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
+import MapKit
 
-struct MapView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct MapView: UIViewRepresentable {
+    func makeUIView(context: Context)->MKMapView{
+        return MKMapView(frame:.zero)
+    }
+    func updateUIView(_ uiView: MKMapView, context: Context) {
+        let coordinate = CLLocationCoordinate2D(latitude: 34, longitude: 116)
+        let span = MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
+        let region = MKCoordinateRegion(center: coordinate, span:span)
+        uiView.setRegion(region, animated: true)
     }
 }
 
