@@ -13,5 +13,10 @@ struct SwimDetail: Hashable, Codable, Identifiable {
     var distince: String
     var pace :String
     var duration: String
+    var time:Int
+    var location:String
+    var totalTime:Int
+    var activeSwimTime:Int
+    var restTime:Int
 }
 

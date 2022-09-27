@@ -11,21 +11,24 @@ struct SwimRow: View{
     var swimDetail:SwimDetail
     var body: some View {
         VStack {
-            Text("Friday Morning Pool Swim")
-                .font(.title3)
-                .multilineTextAlignment(.leading)
-                .padding(-3.0)
+            HStack{Text("Friday Morning Pool Swim")
+                    .font(.title3)
+                    .multilineTextAlignment(.leading)
+                Spacer()
+            }
             HStack{
                 VStack{
-                    Text("1,100m")
+                    Text(swimDetail.distince)
                     Text("Distance")
                 }
+                Spacer()
                 VStack{
-                    Text("23:59")
+                    Text(swimDetail.duration)
                     Text("Duration")
                 }
+                Spacer()
                 VStack{
-                    Text("1:51/100m")
+                    Text(swimDetail.pace)
                     Text("Pace")
                 }
             }

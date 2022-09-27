@@ -11,13 +11,18 @@ import SwiftUI
 
 struct SummaryView: View {
     var body: some View {
+        
         NavigationView {
+            
             List(swimData){
                 swimDetail in
+                NavigationLink(destination: SwimDetailView(swimDetail: swimDetail)) {
                     SwimRow(swimDetail: swimDetail)
-            }}.navigationBarTitle(Text("oneSwim"))
+                }
+            }
+            .navigationBarTitle("OneSwim", displayMode: .large)
+        }
     }
-    
 }
 struct SummaryView_Previews: PreviewProvider {
     static var previews: some View {
