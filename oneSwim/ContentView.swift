@@ -15,7 +15,6 @@ struct ContentView: View {
             MapView().frame(height:300).edgesIgnoringSafeArea(.top)
             CircleImage().padding(.bottom,-130).offset(y:-130)
             VStack(){
-                Text(titleLabel.title)
                 HStack(){
                     Text("Hebei")
                     Spacer()

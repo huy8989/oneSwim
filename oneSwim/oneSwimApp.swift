@@ -11,7 +11,6 @@ import SwiftUI
 struct oneSwimApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
         }
     }
 }
